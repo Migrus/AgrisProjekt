@@ -28,40 +28,35 @@ public class MenuFragment extends ListFragment {
             "Obchodní burza Hradec Králové",
             "Průměrné ceny pohonných hmot - ČSÚ"
     };
-    String[][] ceny = new String[velikost][4];
+
+    public String[] ceny = new String[4*velikost];
 
 
-
-    public String[][] naplnPole(String[][] cena){
-        for (int i = 0; i< velikost;i++){
-            for (int j = 0; j<= 3;j++) {
-                switch (j){
+    public void naplnPole(){
+        for (int i=0;i<velikost;i++ ) {
+                switch (i % 4){
                     case 0:
-                        cena[i][j] = "(" + i + ") 31.10.2014";
+                        ceny[i] = "31.10.2014";
                         break;
                     case 1:
-                        cena[i][j] = "(" + i + ") Vepřová plec bez kosti";
+                        ceny[i] = "Vepřová plec bez kosti";
                         break;
                     case 2:
-                        cena[i][j] = "(" + i + ") 77,16";
+                        ceny[i] = "77,16";
                         break;
                     case 3:
-                        cena[i][j] = "(" + i + ") Kč/kg";
+                        ceny[i] = "Kč/kg";
                         break;
                 }
-            }
         }
-
-        return cena;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.list_fragment, container, false);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, Burzy);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, Burzy);
         setListAdapter(adapter);
-        naplnPole(ceny);
+        naplnPole();
 
         return view;
 
@@ -70,7 +65,7 @@ public class MenuFragment extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
 
         TextFragment txt = (TextFragment)getFragmentManager().findFragmentById(R.id.fragment2);
-        txt.change(Burzy[position],"Version : "+ceny[position][1]);
+        txt.change(ceny);
         getListView().setSelector(android.R.color.holo_blue_dark);
     }
 }
