@@ -72,6 +72,5 @@ public class MenuFragment extends ListFragment {
         TextFragment txt = (TextFragment)getFragmentManager().findFragmentById(R.id.fragment2);
         txt.change(Burzy[position],"Version : "+ceny[position][1]);
         getListView().setSelector(android.R.color.holo_blue_dark);
-
     }
 }
