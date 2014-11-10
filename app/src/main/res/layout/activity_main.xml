@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="Nadpis"
         android:gravity="center"
-        android:textSize="40sp"/>
+        android:textSize="20sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             class="ttrmg.pef.agrisprojekt.MenuFragment"
             android:id="@+id/fragment"
-            android:layout_weight="0.5"/>
+            android:layout_weight="0.6"/>
 
     <!-- levej fragment -->
         <fragment
@@ -33,7 +33,7 @@
             android:layout_height="match_parent"
             class="ttrmg.pef.agrisprojekt.TextFragment"
             android:id="@+id/fragment2"
-            android:layout_weight="0.5"/>
+            android:layout_weight="0.4"/>
 
     </LinearLayout>
     </LinearLayout>
