@@ -5,18 +5,10 @@
     android:background="#5ba4e5"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="40px"
-        android:textColor="#ffffff"
-        android:layout_gravity="center"
-        android:id="@+id/Datum"/>
     <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="4"
-        android:id="@+id/grid"
-        android:stretchMode="columnWidth"></GridView>
+        android:id="@+id/grid"></GridView>
 
 </LinearLayout>
