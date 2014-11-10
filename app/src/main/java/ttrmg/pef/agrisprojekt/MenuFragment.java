@@ -33,7 +33,7 @@ public class MenuFragment extends ListFragment {
 
 
     public void naplnPole(){
-        for (int i=0;i<velikost;i++ ) {
+        for (int i=0;i<(4*velikost);i++ ) {
                 switch (i % 4){
                     case 0:
                         ceny[i] = "31.10.2014";
