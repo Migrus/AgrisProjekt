@@ -29,6 +29,7 @@ public class MenuFragment extends ListFragment {
         TextFragment txt = (TextFragment)getFragmentManager().findFragmentById(R.id.fragment2);
         txt.change(AndroidOS[position],"Version : "+Version[position]);
         //Test: commit commentu: vybraná položka se zbarví do modra.
+        // +Commit&Push
         getListView().setSelector(android.R.color.holo_blue_dark);
     }
 }
